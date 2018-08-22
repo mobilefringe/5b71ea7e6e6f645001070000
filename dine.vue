@@ -161,7 +161,7 @@
                     _.forEach(this.processedStores, function(value, key) {
                         if(_.includes(value.categories, vm.dineFilter)) {
                             if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1529516445000/cerritos.png";
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/png/1534974105000/dtph_default.png";
                             }
                             store_list.push(value);
                         }
