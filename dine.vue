@@ -181,20 +181,20 @@
                     this.filteredStores = store_list;
                     return store_list
                 },
-                allStores() {
-                    var store_list = [];
-                    var vm = this;
-                    _.forEach(this.processedStores, function(value, key) {
-                        if(_.includes(value.categories, vm.dineFilter)) {
-                            if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/png/1534974105000/dtph_default.png";
-                            }
-                            store_list.push(value);
-                        }
-                    });
-                    this.filteredStores = store_list;
-                    return store_list
-                },
+                // allStores() {
+                //     var store_list = [];
+                //     var vm = this;
+                //     _.forEach(this.processedStores, function(value, key) {
+                //         if(_.includes(value.categories, vm.dineFilter)) {
+                //             if (_.includes(value.image_url, 'missing')) {
+                //                 value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/png/1534974105000/dtph_default.png";
+                //             }
+                //             store_list.push(value);
+                //         }
+                //     });
+                //     this.filteredStores = store_list;
+                //     return store_list
+                // },
                 dropDownCats() {
                     var vm = this;
                     var dining_cat =  _.find(this.processedCategories, function(o) { return o.name == "Dining"});
