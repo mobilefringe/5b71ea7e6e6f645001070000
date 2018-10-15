@@ -36,8 +36,9 @@
                                     <p class="event_dates"><span v-if="event.tags && event.tags.length >0">{{event.tags[0]}} | </span> <span v-if="isMultiDay(event)">{{ event.start_date | moment("MMMM D", timezone)}} to {{ event.end_date | moment("MMMM D", timezone)}}</span><span v-else>{{ event.start_date | moment("MMMM D", timezone)}}</span></p>
                                     <div class="event_desc" v-html="event.description_short"></div>
                                     <router-link :to="{ name: 'eventDetails', params: { id: event.slug, banner: pageBanner }}">
-                                        <p class="event_link">Event Details <i class="fas fa-angle-double-right"></i></p>
+                                        <div class="animated_btn event_link">View Event Details <i class="fas fa-angle-double-right"></i></div>
                                     </router-link>
+                                    <hr class="event_seperator">
                                 </div>
                             </div>
                         </div>
@@ -65,8 +66,9 @@
                                         <p class="event_dates"><span v-if="isMultiDay(item)">{{ item.start_date | moment("MMMM D", timezone)}} - {{ item.end_date | moment("MMMM D", timezone)}}</span><span v-else>{{ item.start_date | moment("MMMM D", timezone)}}</span></p>
                                         <div class="event_desc" v-html="item.description_short"></div>
                                         <router-link :to="{ name: 'promotionDetails', params: { id: item.slug, banner: pageBanner }}">
-                                            <p class="event_link">Promotion Details <i class="fas fa-angle-double-right"></i></p>
+                                            <div class="animated_btn event_link">View Promotion Details <i class="fas fa-angle-double-right"></i></div>
                                         </router-link>
+                                        <hr class="event_seperator">
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +80,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row margin_60">
+                        <div v-if="!noMorePromos" class="row margin_60">
                             <div class="col-md-12">
                                 <button class="animated_btn event_load_more" v-if="!noMorePromos" @click="handleButton">Load More</button>
                             </div>
