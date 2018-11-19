@@ -158,11 +158,11 @@
                             }
 
                             if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
-                                value.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1529532187000/eventsplaceholder2@2x.png";
+                                value.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/png/1542645885036/dtph_events.png";
                             }
                             
                             if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1529532187000/eventsplaceholder2@2x.png";
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/png/1542645885036/dtph_events.png";
                             }
                             
                             value.description_short = _.truncate(value.description, { 'length': 250, 'separator': ' ' });
@@ -182,11 +182,11 @@
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if (today >= showOnWebDate) {
                             if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
-                                value.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1529532181000/promoplaceholder2@2x.png";
+                                value.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/png/1542645869115/dtph_promos.png";
                             }
                             
                             if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1529532181000/promoplaceholder2@2x.png";
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/png/1542645869115/dtph_promos.png";
                             }
                             
                             value.description_short = _.truncate(value.description, { 'length': 250, 'separator': ' ' });
