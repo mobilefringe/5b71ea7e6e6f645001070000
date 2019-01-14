@@ -181,24 +181,31 @@
                 ]),
                 homeBanners() {
                     var banners = [];
-                    _.forEach(this.$store.state.banners, function (value, key) {
-                        var today = new Date();
-                        var start = new Date (value.start_date);
-                        if (start <= today){
-                            if (value.end_date){
-                                var end = new Date (value.end_date);
-                                if (end >= today){
-                                    banners.push(value);  
-                                }
-                            } else {
-                                banners.push(value);
-                            }
+                    var temp_banners = [{
+                        name: "",
+                        image_url : "//codecloud.cdn.speedyrails.net/sites/5b71e1b46e6f641211090000/image/jpeg/1547492645045/dgvr_home_1925x470.jpg",
+                        url: ""
+                        
+                    }]
+                    banners = temp_banners;
+                    // _.forEach(this.$store.state.banners, function (value, key) {
+                    //     var today = new Date();
+                    //     var start = new Date (value.start_date);
+                    //     if (start <= today){
+                    //         if (value.end_date){
+                    //             var end = new Date (value.end_date);
+                    //             if (end >= today){
+                    //                 banners.push(value);  
+                    //             }
+                    //         } else {
+                    //             banners.push(value);
+                    //         }
                             
-                            if (value.cms_fields.subheader) {
-                                value.heading = value.cms_fields.subheader;
-                            }
-                        }
-                    });
+                    //         if (value.cms_fields.subheader) {
+                    //             value.heading = value.cms_fields.subheader;
+                    //         }
+                    //     }
+                    // });
                     banners = _.orderBy(banners, function(o) { return o.position });
                     console.log(banners)
                     return banners
