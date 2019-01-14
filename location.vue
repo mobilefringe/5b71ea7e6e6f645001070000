@@ -21,6 +21,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="main_container">
+                    <div class="location_map">
+                        <iframe :src="propertyAddress()" width="100%" height="490" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
                 <div class="location_map main_container">
                     <!--<google-map :property="property" :zoom="16"></google-map>-->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.3920966730293!2d-122.0638271853221!3d37.944629810142935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085614767c80795%3A0x7001749a8f991c5a!2s105+Crescent+Dr%2C+Pleasant+Hill%2C+CA+94523%2C+USA!5e0!3m2!1sen!2sca!4v1511207996780" height="490" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -99,6 +104,12 @@
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
+                },
+                propertyAddress() {
+                    var address = this.property.name + "+" + this.property.address1 + "+" + this.property.city + "+" + this.property.province_state + "+" + this.property.country + this.property.postal_code
+                    var key ="AIzaSyCukCjH3fsuDYBdI44hZKL43m60jEToJjY"
+                    var src = "https://www.google.com/maps/embed/v1/place?q=" + address + "&key="+ key
+                    return src
                 }
             }
         });
