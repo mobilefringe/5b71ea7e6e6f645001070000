@@ -183,7 +183,7 @@
                     var banners = [];
                     var temp_banners = [{
                         name: "",
-                        image_url : "//codecloud.cdn.speedyrails.net/sites/5b71e1b46e6f641211090000/image/jpeg/1547492645045/dgvr_home_1925x470.jpg",
+                        image_url : "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1547495760667/dph_home_1925x470.jpg",
                         url: ""
                         
                     }]
