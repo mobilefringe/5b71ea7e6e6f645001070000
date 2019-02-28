@@ -199,10 +199,10 @@
                     //     }
                     // });
                     var banners = []; //this.$store.state.banners
-                    var temp_image_urls = ["//codecloud.cdn.speedyrails.net/sites/5b71e1b46e6f641211090000/image/jpeg/1551202411000/DGVR_SkinnyFatsOpen518_1925x470_1.jpg", "//codecloud.cdn.speedyrails.net/sites/5b71e1b46e6f641211090000/image/jpeg/1551202411000/dgvr_1925x470_letseat219_1.jpg","//codecloud.cdn.speedyrails.net/sites/5b71e1b46e6f641211090000/image/jpeg/1551202411000/DGVR_OuterSpace119_1925x470_1.jpg","//codecloud.cdn.speedyrails.net/sites/5b71e1b46e6f641211090000/image/jpeg/1551202411000/DGVR_General_1925x470_1.jpg", "//codecloud.cdn.speedyrails.net/sites/5b71e1b46e6f641211090000/image/jpeg/1551202412000/DGVR_Farmer119_1925x470_1.jpg"];
-                    var temp_names = ["Treat Yourself", "HUNGRY?", null];
-                    var temp_desc = ["You deserve it.", "We know just the place...",null];
-                    var temp_urls = ["/stores", "/dine", null,null,null];
+                    var temp_image_urls = ["//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1551383489454/DPH_HungryTreat119_images3a.jpg", "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1551383501020/DPH_HungryTreat119_images3b.jpg"];
+                    var temp_names = ["Treat Yourself", "HUNGRY?"];
+                    var temp_desc = ["You deserve it.", "We know just the place..."];
+                    var temp_urls = ["/stores", "/dine"];
                     
                     _.forEach(temp_image_urls, function (val, key) {
                         var value = {};
