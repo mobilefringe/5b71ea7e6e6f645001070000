@@ -200,9 +200,9 @@
                     // });
                     var banners = []; //this.$store.state.banners
                     var temp_image_urls = ["//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1551383489454/DPH_HungryTreat119_images3a.jpg", "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1551383501020/DPH_HungryTreat119_images3b.jpg"];
-                    var temp_names = ["Treat Yourself", "HUNGRY?"];
-                    var temp_desc = ["You deserve it.", "We know just the place..."];
-                    var temp_urls = ["/stores", "/dine"];
+                    // var temp_names = ["Treat Yourself", "HUNGRY?"];
+                    // var temp_desc = ["You deserve it.", "We know just the place..."];
+                    // var temp_urls = ["/stores", "/dine"];
                     
                     _.forEach(temp_image_urls, function (val, key) {
                         var value = {};
