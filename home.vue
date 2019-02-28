@@ -180,14 +180,6 @@
                     'processedEvents'
                 ]),
                 homeBanners() {
-                    var banners = [];
-                    var temp_banners = [{
-                        name: "",
-                        image_url : "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1547495760667/dph_home_1925x470.jpg",
-                        url: ""
-                        
-                    }]
-                    banners = temp_banners;
                     // _.forEach(this.$store.state.banners, function (value, key) {
                     //     var today = new Date();
                     //     var start = new Date (value.start_date);
@@ -206,8 +198,23 @@
                     //         }
                     //     }
                     // });
+                    var banners = []; //this.$store.state.banners
+                    var temp_image_urls = ["//codecloud.cdn.speedyrails.net/sites/5b71e1b46e6f641211090000/image/jpeg/1551202411000/DGVR_SkinnyFatsOpen518_1925x470_1.jpg", "//codecloud.cdn.speedyrails.net/sites/5b71e1b46e6f641211090000/image/jpeg/1551202411000/dgvr_1925x470_letseat219_1.jpg","//codecloud.cdn.speedyrails.net/sites/5b71e1b46e6f641211090000/image/jpeg/1551202411000/DGVR_OuterSpace119_1925x470_1.jpg","//codecloud.cdn.speedyrails.net/sites/5b71e1b46e6f641211090000/image/jpeg/1551202411000/DGVR_General_1925x470_1.jpg", "//codecloud.cdn.speedyrails.net/sites/5b71e1b46e6f641211090000/image/jpeg/1551202412000/DGVR_Farmer119_1925x470_1.jpg"];
+                    var temp_names = ["Treat Yourself", "HUNGRY?", null];
+                    var temp_desc = ["You deserve it.", "We know just the place...",null];
+                    var temp_urls = ["/stores", "/dine", null,null,null];
+                    
+                    _.forEach(temp_image_urls, function (val, key) {
+                        var value = {};
+                        console.log("temp_image_urls[key]", key, temp_image_urls[key])
+                        value.image_url = temp_image_urls[key];
+                        value.name = temp_names[key];
+                        value.description = temp_desc[key];
+                        value.url = temp_urls[key];
+                            
+                        banners.push(value);
+                    });
                     banners = _.orderBy(banners, function(o) { return o.position });
-                    console.log(banners)
                     return banners
                 },
                 featuredItems() {
