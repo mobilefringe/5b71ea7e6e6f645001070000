@@ -206,7 +206,6 @@
                     
                     _.forEach(temp_image_urls, function (val, key) {
                         var value = {};
-                        console.log("temp_image_urls[key]", key, temp_image_urls[key])
                         value.image_url = temp_image_urls[key];
                         // value.name = temp_names[key];
                         // value.description = temp_desc[key];
