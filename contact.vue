@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <!--<div v-if="main" class="margin_60" v-html="main.body"></div>-->
-                            <p class="margin_60">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae metus tristique, pulvinar libero non, tincidunt neque. Nam non molestie elit. Curabitur mattis elementum eros, sit amet vulputate tellus tincidunt et. In vehicula odio vel ultricies tempus. Aliquam in turpis vulputate, ultricies justo a, tincidunt risus. </p>
+                           
                         </div>
                     </div>
                     <div class="row">
