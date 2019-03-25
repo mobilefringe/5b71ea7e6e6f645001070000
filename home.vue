@@ -199,7 +199,7 @@
                     //     }
                     // });
                     var banners = []; //this.$store.state.banners
-                    var temp_image_urls = ["//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1551383489454/DPH_HungryTreat119_images3a.jpg", "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1551383501020/DPH_HungryTreat119_images3b.jpg"];
+                    var temp_image_urls = ["//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1551383489454/DPH_HungryTreat119_images3a.jpg", "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1551383501020/DPH_HungryTreat119_images3b.jpg", "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1553541067094/dph_letseat_1925x470hero_1.jpg", "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1553541067094/dph_letseat_1925x470hero_1.jpg", "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1553541069412/dph_foodtrucks19_1925x470hero_1.jpg", "//codecloud.cdn.speedyrails.net/sites/5b71ea7e6e6f645001070000/image/jpeg/1553541072595/DPH_ClubPilates_1925x470_1soon.jpg"];
                     var temp_names = ["HUNGRY?", "Treat Yourself"];
                     var temp_desc = ["We know just the place...", "You deserve it."];
                     var temp_urls = ["/dine", "/stores"];
