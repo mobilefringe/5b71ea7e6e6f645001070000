@@ -50,7 +50,7 @@ require.config({
         'google_map': 'https://mmvue.codecloudapp.com/google_map.vue?noext',
         //bugsnag intergration depedencies
         'bugsnag': 'https://mmvue.codecloudapp.com/bugsnag',
-        'bugsnag-plugin-vue': 'https://mmvue.codecloudapp.com/google_map.vue?noext',
+        'bugsnag-plugin-vue': 'https://mmvue.codecloudapp.com/bugsnag-vue',
     }
 });
 
