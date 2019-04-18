@@ -62,6 +62,10 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
     Vue.use(VueI18n);
     Vue.use(VueBreadcrumbs);
     
+    /*initialize bugsnag 8/
+    const bugsnagClient = bugsnag('f4f98085a0bc83c412fadef2ccc4b99d')
+bugsnagClient.use(bugsnagVue, Vue)
+    
     /* initialize router */
     const router = new VueRouter({
         mode: 'history',
