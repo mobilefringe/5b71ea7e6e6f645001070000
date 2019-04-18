@@ -54,7 +54,7 @@ require.config({
     }
 });
 
-require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-sync', 'datastore', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue-breadcrumbs', 'vue!loading.vue', 'vue!messages.vue', 'vue!header.vue', 'vue!footer.vue', 'vue!inside_header.vue', 'vue!breadcrumb.vue',], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, VuexRouterSync, store, VueI18n, messages, moment, Meta, VueBreadcrumbs, LoadingComponent, MessagesComponent, HeaderComponent, FooterComponent, insideHeaderComponent, BreadcrumbComponent) {
+require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-sync', 'datastore', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue-breadcrumbs', 'vue!loading.vue', 'vue!messages.vue', 'vue!header.vue', 'vue!footer.vue', 'vue!inside_header.vue', 'vue!breadcrumb.vue',], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, VuexRouterSync, store, VueI18n, messages, moment, Meta, VueBreadcrumbs, LoadingComponent, MessagesComponent, HeaderComponent, FooterComponent, insideHeaderComponent, BreadcrumbComponent, bugsnag, bugsnagVue) {
     
     Vue.use(Meta);
     Vue.use(VueRouter);
@@ -64,7 +64,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
     
     /*initialize bugsnag */
     const bugsnagClient = bugsnag('f4f98085a0bc83c412fadef2ccc4b99d')
-bugsnagClient.use(bugsnagVue, Vue)
+    bugsnagClient.use(bugsnagVue, Vue)
     
     /* initialize router */
     const router = new VueRouter({
