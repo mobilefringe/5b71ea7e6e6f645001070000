@@ -19,7 +19,7 @@
                             <img v-if="currentContest && currentContest.image_url" class="img_max" :src="currentContest.image_url" :alt="currentContest.name">
                         </div>
                     </div> 
-                    <div class="row"> 
+                    <div class="row" v-if="currentContest"> 
                         <div class="col-md-8 col-md-offset-2">
     						<h3 v-if="currentContest && currentContest.name" class="contest_title">{{currentContest.name}}</h3>
                             <div v-if="currentContest.rich_description" class="contest_desc" v-html="currentContest.rich_description"></div>
