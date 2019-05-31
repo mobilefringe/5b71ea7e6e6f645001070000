@@ -8,7 +8,7 @@
                         <h2>Contest</h2>
                     </div>
                 </div>
-                <div class="main_container">
+                <div class="main_container" v-if="currentContest">
                     <div class="row">
                         <div class="col-md-12">
                             <breadcrumb></breadcrumb>
