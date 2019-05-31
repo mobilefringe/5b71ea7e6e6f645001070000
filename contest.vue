@@ -120,7 +120,7 @@
                 }); 
                 
                 this.$store.dispatch("getData", "contests").then(response => {
-                    this.currentContest = this.findContestByShowOnSlug(''); //Add Contest Show On URL
+                    this.currentContest = this.findContestByShowOnSlug('pleasanthill-contest'); //Add Contest Show On URL
                     this.dataLoaded = true;
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
