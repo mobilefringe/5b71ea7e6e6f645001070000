@@ -8,7 +8,7 @@
                         <h2>Contest</h2>
                     </div>
                 </div>
-                <div class="main_container" v-if="currentContest">
+                <div class="main_container">
                     <div class="row">
                         <div class="col-md-12">
                             <breadcrumb></breadcrumb>
@@ -119,7 +119,7 @@
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 }); 
                 
-                this.$store.dispatch("getData", "contests").then(response => {
+                this.$store.dispatch("getData", "contest").then(response => {
                     this.currentContest = this.findContestByShowOnSlug(''); //Add Contest Show On URL
                     this.dataLoaded = true;
                 }, error => {
