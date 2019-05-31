@@ -119,7 +119,7 @@
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 }); 
                 
-                this.$store.dispatch("getData", "contest").then(response => {
+                this.$store.dispatch("getData", "contests").then(response => {
                     this.currentContest = this.findContestByShowOnSlug(''); //Add Contest Show On URL
                     this.dataLoaded = true;
                 }, error => {
