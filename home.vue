@@ -2,6 +2,7 @@
     <div><!-- without an outer container div this component template will not render -->
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
+        <image-popup></image-popup>
             <div v-if="dataLoaded" v-cloak>
                 <div class="home_banner_container">
                     <div class="prev"></div>
