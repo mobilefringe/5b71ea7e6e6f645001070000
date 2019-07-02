@@ -3,7 +3,6 @@
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
-
                 <image-popup></image-popup>
                 <div class="home_banner_container">
                     <div class="prev"></div>
@@ -105,7 +104,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "vue!vue-slick", "moment", "moment-timezone", "vue-moment", "vue!welcome_msg", "vue!image-popup"], function (Vue, Vuex, slick, moment, tz, VueMoment, welcomeMessage, imagePopup) {
+    define(["Vue", "vuex", "vue!vue-slick", "moment", "moment-timezone", "vue-moment", "vue!welcome_msg", "vue!image_popup"], function (Vue, Vuex, slick, moment, tz, VueMoment, welcomeMessage, imagePopup) {
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
             data: function() {
