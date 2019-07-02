@@ -2,7 +2,7 @@
     <div><!-- without an outer container div this component template will not render -->
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
-        <image-popup></image-popup>
+            <image-popup></image-popup>
             <div v-if="dataLoaded" v-cloak>
                 <div class="home_banner_container">
                     <div class="prev"></div>
@@ -104,7 +104,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "vue!vue-slick", "moment", "moment-timezone", "vue-moment", "vue!welcome_msg", "image-popup"], function (Vue, Vuex, slick, moment, tz, VueMoment, welcomeMessage, imagePopup) {
+    define(["Vue", "vuex", "vue!vue-slick", "moment", "moment-timezone", "vue-moment", "vue!welcome_msg", "vue!image-popup"], function (Vue, Vuex, slick, moment, tz, VueMoment, welcomeMessage, imagePopup) {
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
             data: function() {
