@@ -512,7 +512,7 @@ a {
             .banner_heading {
                 padding: 10px 20px;
                 border: 1px solid #FFF;
-                background: $secondary;
+                background: $primary;
                 font-family: 'Roboto', sans-serif;
                 font-size: 1.083rem;
                 line-height: normal;
