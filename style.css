@@ -507,7 +507,7 @@ a {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: #FFF;
+            color: #000;
             text-align: center;
             .banner_heading {
                 padding: 10px 20px;
@@ -517,7 +517,7 @@ a {
                 font-size: 1.083rem;
                 line-height: normal;
                 letter-spacing: 0.15rem;
-                color: #FFF;
+                color: #000;
                 text-transform: uppercase;
             }
             .banner_title {
