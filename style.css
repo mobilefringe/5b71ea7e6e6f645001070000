@@ -812,7 +812,6 @@ a {
         top: 50%;
         left: 100%;
         margin: -15px 0 0 1px;
-        width: 30px;
         height: 30px;
         border-radius: 50%;
         background: $secondary;
