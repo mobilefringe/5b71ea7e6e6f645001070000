@@ -331,7 +331,7 @@ a {
             	    background: $secondary;
             	}
             	a:hover {
-                    color: #FFF;
+                    color: #000;
                 }
             }
         }
