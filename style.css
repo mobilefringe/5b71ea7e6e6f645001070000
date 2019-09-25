@@ -251,7 +251,7 @@ a {
 
 /* *** HEADER *** */
 #header {
-    padding: 21px 0 0 0;
+    padding: 24px 0 0 0;
     box-shadow: 1px 1px 7px rgba(12, 12, 12, 0.3);
     .social_icon_container {
         position: absolute;
@@ -270,7 +270,7 @@ a {
         }
     }
     .site_logo {
-        padding-bottom: 28px;
+        padding-bottom: 24px;
         max-width: 114px;
         transition: all 0.3s ease;
         img {
