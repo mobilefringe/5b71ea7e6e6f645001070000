@@ -22,9 +22,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <a v-if="leasingBooklet" :href="leasingBooklet" target="_blank">
-        		                <!--<div class="animated_btn leasing_btn">-->
-        		                <!--    Leasing Booklet-->
-        		                <!--</div>    -->
+        		                <div class="animated_btn leasing_btn">
+        		                    Leasing Booklet
+        		                </div>    
         		            </a>    
                         </div>
                     </div>
