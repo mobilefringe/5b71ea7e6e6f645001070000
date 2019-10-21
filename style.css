@@ -331,6 +331,9 @@ a {
             	    background: $secondary;
             	    color: #000;
             	}
+            	p {
+            	    margin: 0;
+            	}
             	a:hover {
                     color: #000;
                 }
