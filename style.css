@@ -1514,9 +1514,6 @@ $anim-speed: 0.3s;
             text-align: center;
         }
     }
-    .delivery_option:last-of-type {
-        margin: 0;
-    }
 }
 
 input[type=search] {
