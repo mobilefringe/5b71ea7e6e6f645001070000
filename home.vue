@@ -43,7 +43,8 @@
             					            <h3>{{ item.name }}</h3>
         					            </span>
                 					    <span class="info">
-            					            <p><span v-if="isMultiDay(item)">{{ item.start_date | moment("MMMM D", timezone)}} to {{ item.end_date | moment("MMMM D", timezone)}}</span><span v-else>{{ item.start_date | moment("MMMM D", timezone)}}</span></p>
+            					            <p v-if="isMultiDay(item)">{{ item.start_date | moment("MMMM D", timezone)}} to {{ item.end_date | moment("MMMM D", timezone)}}</p>
+            					            <p v-else>{{ item.start_date | moment("MMMM D", timezone)}}</p>
             					            <p>View Event Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
         					            </span>
                     				</div>
@@ -57,7 +58,8 @@
             					            <h3>{{ item.name }}</h3>
         					            </span>
                 					    <span class="info">
-            					            <p><span v-if="isMultiDay(item)">{{ item.start_date | moment("MMMM D", timezone)}} to {{ item.end_date | moment("MMMM D", timezone)}}</span><span v-else>{{ item.start_date | moment("MMMM D", timezone)}}</span></p>
+            					            <p v-if="isMultiDay(item)">{{ item.start_date | moment("MMMM D", timezone)}} to {{ item.end_date | moment("MMMM D", timezone)}}</p>
+            					            <p v-else>{{ item.start_date | moment("MMMM D", timezone)}}</p>
             					            <p>View Promotion Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
         					            </span>
                     				</div>
@@ -70,7 +72,7 @@
                         <div class="col-md-8 col-md-offset-2">
                             <div class="insta-feed-container">
                                 <div class="insta-feed-image " v-for="(item, index) in instaFeed">
-                                    <a :href="item.link" target="_blank">
+                                    <a :href="item.link" target="_blank" :aria-label="'View Post on Instagram: ' + item.caption.text">
                                         <div class="insta-img" v-bind:style="{ 'background-image': 'url(' + item.images.standard_resolution.url + ')' }"></div>
                                         <div class="insta_content">
                                             <p class="insta_caption">{{ item.caption.text }}</p>
@@ -86,7 +88,7 @@
                         <div class="insta_prev"></div>
                         <slick ref="slick" :options="instaOptions">
                             <div class="insta-feed-image " v-for="(item, index) in instaFeed">
-                                <a :href="item.link" target="_blank">
+                                <a :href="item.link" target="_blank" :aria-label="'View Post on Instagram: ' + item.caption.text">
                                     <div class="insta-img" v-bind:style="{ 'background-image': 'url(' + item.images.standard_resolution.url + ')' }"></div>
                                     <div class="insta_content">
                                         <p class="insta_caption">{{ item.caption.text }}</p>
