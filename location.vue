@@ -97,7 +97,7 @@
                     try {
                         let results = await Promise.all([
                             this.$store.dispatch("getData", "repos"), 
-                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + Site.subdomain + "-leasing.json" })
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + Site.subdomain + "-location.json" })
                         ]);
                         return results;
                     } catch (e) {
