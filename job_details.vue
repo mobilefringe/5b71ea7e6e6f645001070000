@@ -19,11 +19,9 @@
                             <div class="col-md-8">
                                 <p v-if="currentJob.jobable_type == 'Property'" class="event_store_name">{{ property.name }}</p>
                                 <p v-else class="event_store_name">{{ currentJob.store.name }}</p>
-                                <h4 class="event_name">{{ currentJob.name }}</h4>
-                                <p class="event_dates">
-                                    <span v-if="isMultiDay(currentJob)">{{ currentJob.start_date | moment("MMMM D", timezone)}} - {{ currentJob.end_date | moment("MMMM D", timezone)}}</span>
-                                    <span v-else>{{ currentJob.start_date | moment("MMMM D", timezone)}}</span>
-                                </p>
+                                <h2 class="event_name">{{ currentJob.name }}</h2>
+                                <p class="event_dates" v-if="isMultiDay(currentJob)">{{ currentJob.start_date | moment("MMMM D", timezone)}} - {{ currentJob.end_date | moment("MMMM D", timezone)}}</p>
+                                <p class="event_dates" v-else>{{ currentJob.start_date | moment("MMMM D", timezone)}}</p>
                                 <div class="event_desc event_details" v-html="currentJob.rich_description"></div>
                             </div>
                             <div class="col-md-4 hidden-sm hidden-xs">
