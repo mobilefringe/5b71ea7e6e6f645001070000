@@ -74,7 +74,8 @@
                         					            <h3>{{ item.name }}</h3>
                     					            </span>
                             					    <span class="info">
-                        					            <p><span v-if="isMultiDay(item)">{{ item.start_date | moment("MMMM D", timezone)}} - {{ item.end_date | moment("MMMM D", timezone)}}</span><span v-else>{{ item.start_date | moment("MMMM D", timezone)}}</span></p>
+                        					            <p v-if="isMultiDay(item)">{{ item.start_date | moment("MMMM D", timezone)}} - {{ item.end_date | moment("MMMM D", timezone)}}</p>
+                        					            <p v-else>{{ item.start_date | moment("MMMM D", timezone)}}</p>
                         					            <p>View Promotion Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                     					            </span>
                                 				</div>
@@ -95,28 +96,8 @@
                         					            <h3>{{ item.name }}</h3>
                     					            </span>
                             					    <span class="info">
-                        					            <p><span v-if="isMultiDay(item)">{{ item.start_date | moment("MMMM D", timezone)}} - {{ item.end_date | moment("MMMM D", timezone)}}</span><span v-else>{{ item.start_date | moment("MMMM D", timezone)}}</span></p>
-                        					            <p>View Promotion Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
-                    					            </span>
-                                				</div>
-                                    		</router-link>
-                                	    </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div v-if="this.currentStore.coupons">
-                                <h3 class="store_details_title">Current Coupons</h3> 
-                                <div class="row margin_40">
-                                    <div class="col-md-6" v-if="storeCoupons" v-for="item in storeCoupons">
-                                        <div class="feature_item_container">
-                                	        <router-link class="tile" :to="{ name: 'couponDetails', params: { id: item.slug }}">
-                                    			<img :src="item.image_url" :alt="item.name">
-                                				<div class="details">
-                        					    	<span class="title">
-                        					            <h3>{{ item.name }}</h3>
-                    					            </span>
-                            					    <span class="info">
-                        					            <p><span v-if="isMultiDay(item)">{{ item.start_date | moment("MMMM D", timezone)}} - {{ item.end_date | moment("MMMM D", timezone)}}</span><span v-else>{{ item.start_date | moment("MMMM D", timezone)}}</span></p>
+                        					            <p v-if="isMultiDay(item)">{{ item.start_date | moment("MMMM D", timezone)}} - {{ item.end_date | moment("MMMM D", timezone)}}</p>
+                        					            <p v-else>{{ item.start_date | moment("MMMM D", timezone)}}</p>
                         					            <p>View Promotion Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
                     					            </span>
                                 				</div>
