@@ -5,7 +5,7 @@
             <div v-if="dataLoaded" v-cloak>
         		<div class="inside_page_header" v-if="pageBanner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
                     <div class="main_container position_relative">
-                        <h2>Delivery</h2>
+                        <h1>Delivery</h1>
                     </div>
                 </div>
         		<div class="main_container">
