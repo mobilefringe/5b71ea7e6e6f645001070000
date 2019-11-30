@@ -172,14 +172,14 @@
             props:['id'],
             created (){
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Directory Banner').images;
-                    if(temp_repo != null) {
-                        this.pageBanner = temp_repo[0];
-                    } else {
-                        this.pageBanner = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5de184076e6f6416c44a0000/image/jpeg/1529532304000/insidebanner2.jpg"
-                        }
-                    }
+                    // var temp_repo = this.findRepoByName('Directory Banner').images;
+                    // if(temp_repo != null) {
+                    //     this.pageBanner = temp_repo[0];
+                    // } else {
+                    //     this.pageBanner = {
+                    //         "image_url": "//codecloud.cdn.speedyrails.net/sites/5de184076e6f6416c44a0000/image/jpeg/1529532304000/insidebanner2.jpg"
+                    //     }
+                    // }
                 
                     this.updateCurrentStore(this.id);
                     this.dataLoaded = true;
