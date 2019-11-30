@@ -74,7 +74,7 @@
                             </div>
                         </transition-group>
                         <div v-if="promos.length == 0">
-                            <div class="row">
+                            <div class="row margin_60">
                                 <div class="col-md-12">
                                     <p>Sorry, there are no Promotions posted at this time. Please check back soon!</p>    
                                 </div>
