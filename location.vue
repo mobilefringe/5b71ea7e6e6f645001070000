@@ -5,7 +5,7 @@
             <div v-if="dataLoaded" v-cloak>
                 <div class="inside_page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
                     <div class="main_container position_relative">
-                        <h2>Location</h2>
+                        <h1>Location</h1>
                     </div>
                 </div>
                 <div class="main_container">
@@ -16,8 +16,8 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <!--<div v-if="main" v-html="main.body"></div>-->
-                            <p>Downtown Pleasant Hill offers the Pleasant Hill Community a great shopping and dining experience in an outdoor setting. Let Downtown Pleasant Hill be your favorite destination to SHOPE.DINE.PLAY in Pleasant Hill.</p>
+                            <div v-if="main" v-html="main.body"></div>
+                            <!--<p>Downtown Pleasant Hill offers the Pleasant Hill Community a great shopping and dining experience in an outdoor setting. Let Downtown Pleasant Hill be your favorite destination to SHOPE.DINE.PLAY in Pleasant Hill.</p>-->
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,10 @@
                 loadData: async function () {
                     this.property.mm_host = this.property.mm_host.replace("http:", "");
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/pleasanthill-location.json"})]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "repos"), 
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + Site.subdomain + "-leasing.json" })
+                        ]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
