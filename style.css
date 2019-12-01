@@ -955,9 +955,6 @@ $anim-speed: 0.3s;
 		}
     }
 	&:focus, &:hover {
-	    img {
-	        filter: blur(2px);
-	    }
 		.details, span {
 			opacity: 1;
 		}
@@ -2180,12 +2177,6 @@ input[type=search] {
         text-align: center;
     }
     .tile {
-	    img {
-	        filter: blur(1px);
-	    }
-	    .details {
-	        color: #FFF;
-	    }
 		&:before {
 			top: 30%;
 			opacity: 1;
