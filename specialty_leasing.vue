@@ -60,7 +60,7 @@
             created() {
                 this.loadData().then(response => {
                     var temp_repo = this.findRepoByName('Specialty Leasing Banner').images;
-                    if(temp_repo != null) {
+                    if (temp_repo != null) {
                         this.pageBanner = temp_repo[0];
                     } else {
                         this.pageBanner = {
@@ -68,13 +68,13 @@
                         }
                     }
                     
-                     var temp_repo1 = this.findRepoByName('Leasing Booklet');
-                     if(temp_repo1) {
-                         this.leasingBooklet = temp_repo1.images[0].image_url;
-                     }
+                    // var temp_repo1 = this.findRepoByName('Leasing Booklet');
+                    // if (temp_repo1) {
+                    //     this.leasingBooklet = temp_repo1.images[0].image_url;
+                    // }
 
                     var temp_repo2 = this.findRepoByName('Leasing Images');
-                    if(temp_repo2) {
+                    if (temp_repo2) {
                         this.pageImages = temp_repo2.images;
                     }
 
@@ -94,7 +94,10 @@
                 loadData: async function () {
                     this.property.mm_host = this.property.mm_host.replace("http:", "");
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/pleasanthill-pop-up-specialty-leasing.json"})]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "repos"), 
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/pleasanthill-pop-up-specialty-leasing.json" })
+                        ]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
