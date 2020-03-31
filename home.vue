@@ -297,7 +297,7 @@
                             this.$store.dispatch("getData", "banners"), 
                             this.$store.dispatch("getData","promotions"), 
                             this.$store.dispatch("getData", "events"), 
-                            this.$store.dispatch('LOAD_PAGE_DATA', { url: "https://pleasanthill.mallmaverickstaging.com/api/v4/pleasanthill/social.json" })
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: "https://pleasanthill.mallmaverick.com/api/v4/pleasanthill/social.json" })
                         ]);
                         return results;
                     } catch(e) {
