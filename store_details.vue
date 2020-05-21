@@ -154,7 +154,7 @@
             created (){
                 this.loadData().then(response => {
                     var temp_repo = this.findRepoByName('Directory Banner').images;
-                    if(temp_repo != null) {
+                    if (temp_repo != null) {
                         this.pageBanner = temp_repo[0];
                     } else {
                         this.pageBanner = {
