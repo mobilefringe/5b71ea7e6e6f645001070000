@@ -59,22 +59,17 @@
                                 			    <img class="transparent_logo" src="//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1536094421888/default_background.png" alt="transparent logo">
                                 			    <img  class="store_img" :src="store.store_front_url_abs" alt="">
                                 			</div>
-                                			
                                             <div v-else class="no_logo_container">
                                                 <img class="transparent_logo" src="//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1536094421888/default_background.png" alt="">
                                                 <div class="no_logo_text">
                                                     <div class="store_text"><h2>{{ store.name }}</h2></div>
                                                 </div>
                                             </div>
-                                			<div class="store_tag" v-if="store.total_published_promos">
-            									<div class="store_tag_text">Promotion</div>
-            								</div>
-            								<div class="store_tag" v-if="!store.total_published_promos && store.is_coming_soon_store">
-            									<div class="store_tag_text">Coming Soon</div>
-            								</div>
-            								<div class="store_tag" v-if="!store.total_published_promos && !store.is_coming_soon_store && store.is_new_store">
-            									<div class="store_tag_text">New Store</div>
-            								</div>
+                                			<div v-if="store.store_flags">
+            								    <div class="store_tag" v-for="(tag, index) in store.store_flags">
+                                                    <div class="store_tag_text">{{ tag }}</div>
+            								    </div>
+                                            </div>
             								<div class="store_details">
             								    <div class="store_text"><h2>{{ store.name }}</h2></div>    
             								</div>
@@ -175,6 +170,33 @@
                             if (_.includes(value.image_url, 'missing')) {
                                 value.image_url = vm.property.default_logo;
                             }
+                            
+                            // Create list of custom store tags
+                            var flags = [];
+                            if (value.tags) {
+                                var store_tags = value.tags;
+                                _.forEach(store_tags, function(tag, key) {
+                                    flags.push(tag);
+                                });
+                            }
+                            if (value.is_new_store) {
+                                flags.push("New");
+                            } else if (value.is_coming_soon_store) {
+                                flags.push("Coming Soon");
+                            } else if (value.is_relocated_store) {
+                                flags.push("Relocated");
+                            } else if (value.total_published_promos) {
+                                flags.push("Promotion");
+                            } else if (value.total_published_events) {
+                                flags.push("Event");
+                            } else if (value.total_published_jobs) {
+                                flags.push("Job");
+                            }
+                            if (flags.length > 3) {
+                                flags = _.slice(flags, 0, 3);
+                            }
+                            value.store_flags = flags;
+                            
                             store_list.push(value);
                         }
                     });
